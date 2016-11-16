@@ -35,3 +35,111 @@ a:hover .header-profile-image {
 .has-error .help-inline.error-text {
   display: inline;
 }
+
+
+.pageTitle {
+  font-size: 14px;
+  background: #FFC797;
+  height: 60px;
+  margin-top: 0;
+  text-align: center;
+  display: block;
+  padding: 10px;
+  color: white;
+  font-weight: lighter;
+}
+
+.navbar {
+  border: 0px;
+}
+
+.navbar-toggle {
+  border-radius: 0px;
+  padding: 5px 10px;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #FFC797;
+}
+
+
+.navbar-inverse .navbar-nav > li > a {
+  color: black;
+}
+
+.navbar-brand {
+  padding: 10px 40px;
+  font-size: 19px;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: #ffe2cc;
+  background: rgba(255,199,151,0.85);
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+  text-shadow: none;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: #5F9EA0;
+}
+
+.hymnTitle {
+  font-size: 16px;
+  font-weight: bold;
+  border: solid black 1px;
+  height: 30px;
+}
+
+.hymnStatus {
+  font-size: 20px;
+  border: solid gray 1px;
+}
+
+.hymnAuthor {
+  border: solid gray 1px;
+}
+
+.hymnAuthorName {
+  font-size: 12px;
+}
+
+.hymnAuthorInfo {
+  font-size: 12px;
+  font-style: initial;
+}
+
+.mainButtons {
+  text-align: center;
+  font-weight: 300;
+}
+
+.signInPage {
+  margin-top: 30px;
+}
+
+.btn-primary {
+  width: 150px;
+  height: 40px;
+  margin: 10px;
+  font-weight: lighter;
+  border: none;
+  border-radius: 0px;
+  background: #5F9EA0;
+}
+
+h4 {
+  color: gray;
+  padding: 15px;
+  font-weight: lighter;
+}
+

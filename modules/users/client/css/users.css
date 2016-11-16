@@ -34,3 +34,8 @@
   min-height: 150px;
   max-height: 150px;
 }
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: #ffe2cc;
+  background: rgba(255,199,151,0.85);
+}

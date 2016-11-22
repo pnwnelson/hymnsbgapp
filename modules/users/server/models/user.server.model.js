@@ -40,10 +40,10 @@ var UserSchema = new Schema({
     default: '',
     validate: [validateLocalStrategyProperty, 'Please fill in your last name']
   },
-  displayName: {
+  /* displayName: {
     type: String,
     trim: true
-  },
+  }, */
   email: {
     type: String,
     unique: true,
@@ -63,7 +63,7 @@ var UserSchema = new Schema({
     type: String,
     default: ''
   },
-  salt: {
+  /* salt: {
     type: String
   },
   profileImageURL: {
@@ -75,7 +75,7 @@ var UserSchema = new Schema({
     required: 'Provider is required'
   },
   providerData: {},
-  additionalProvidersData: {},
+  additionalProvidersData: {}, */
   roles: {
     type: [{
       type: String,

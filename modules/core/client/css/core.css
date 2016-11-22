@@ -78,6 +78,7 @@ a:hover .header-profile-image {
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
   border-color: #ffe2cc;
+  background: #FFC797;
   background: rgba(255,199,151,0.85);
 }
 
@@ -129,7 +130,6 @@ a:hover .header-profile-image {
 
 .btn-primary {
   width: 150px;
-  height: 40px;
   margin: 10px;
   font-weight: lighter;
   border: none;
@@ -137,9 +137,25 @@ a:hover .header-profile-image {
   background: #5F9EA0;
 }
 
+h5 {
+  font-weight: lighter;
+  font-size: 18px;
+  padding: 10px;
+}
+
 h4 {
   color: gray;
   padding: 15px;
   font-weight: lighter;
 }
+
+h3 {
+  color: gray;
+  font-weight: lighter;
+}
+
+.page-header {
+  width: 80%;
+}
+
 

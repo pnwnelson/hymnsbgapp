@@ -1,0 +1,20 @@
+<section >
+  <div class="detail-page-header text-center">
+    <a href="/purplehymnals" class="btn btn-primary btn-sm" role="button"><i class="glyphicon glyphicon-backward"></i><span> New search</span></a><h4>Purple Hymnal</h4>
+  </div>
+  <div class="pull-right"
+       ng-show="vm.purplehymnal.isCurrentUserOwner">
+    <a class="btn btn-primary"
+       ui-sref="purplehymnals.edit({ purplehymnalId: vm.purplehymnal._id })">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div class="text-center page-wrapper"><span class="detail-page-category">Page</span><p class="page" ng-bind="vm.purplehymnal.page">{{vm.purplehymnal.page}}</p></div>
+  <div class="text-center popular">Popular: <span class="lead" ng-bind="vm.purplehymnal.popular"></span></div>
+  <div class="text-center"><span class="detail-page-category">Title</span><p class="lead" ng-bind="vm.purplehymnal.title"></p></div>
+  <div class="text-center"><span class="detail-page-category">Author</span><p class="lead" ng-bind="vm.purplehymnal.author"></p></div>
+  <div class="text-center"><span class="detail-page-category">Author/Hymn Information</span></div><p class="lead author-hymn-info" ng-bind="vm.purplehymnal.authorInfo"></p>
+</section>

@@ -1,0 +1,51 @@
+.list-group-item {
+	padding: 0px 12px;
+}
+
+h4 {
+	padding: 0px;
+	font-size: 26px;
+}
+
+.detail-page-header {
+	margin: 30px;
+}
+
+.popular {
+	border: 1px dotted gray;
+	border-radius: 3px;
+	margin: 20px;
+	padding: 3px;
+}
+
+.author-hymn-info {
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 3px;
+}
+
+.detail-page-category {
+	font-weight: lighter;
+	color: lightgray;
+}
+
+.list-page-label {
+	font-weight: lighter;
+	color: lightgray;
+}
+
+.list-page-number {
+	font-style: bold;
+}
+
+.page {
+	font-size: 36px;
+}
+
+.page-wrapper {
+	margin: 20px;
+}
+
+.hidden-hymnals {
+	display: none;
+}

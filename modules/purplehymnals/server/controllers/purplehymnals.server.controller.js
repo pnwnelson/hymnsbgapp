@@ -104,7 +104,7 @@ exports.search = function(req, res) {
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.jsonp(purplehymnals);
+      res.jsonp(purplehymnal);
     }
   });
 };

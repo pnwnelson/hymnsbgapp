@@ -1,0 +1,39 @@
+<section>
+  <div class="detail-page-header text-center">
+    <a href="/" class="btn btn-primary btn-sm" role="button"><i class="glyphicon glyphicon-backward"></i><span> Choose hymnal</span></a><h4>WCG (1993) Hymnal</h4>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <p>Search Page #</p>
+    </div>
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4 text-center">
+      <input class="form-control" ng-model="searchText" type="number" value="Page Number" id="page-number" placeholder="Enter pg #"><br>
+    </div>
+    <div class="col-xs-4"></div>
+
+  </div>
+
+  <hr>
+
+  <div class="list-group">
+    
+    <a ng-repeat="wcg1993hymnal in vm.wcg1993hymnals | filter:searchText"
+       ui-sref="wcg1993hymnals.view({ wcg1993hymnalId: wcg1993hymnal._id })"
+       class="list-group-item">
+      <!-- <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="purplehymnal.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="purplehymnal.user" ng-bind="purplehymnal.user.displayName"></span>
+        <span ng-if="!purplehymnal.user">Deleted User</span>
+      </small> -->
+      <div class="list-group-item-heading list-page-label">Page: <span class="list-page-number" ng-bind="wcg1993hymnal.page"></span></div>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.wcg1993hymnals.$resolved && !vm.wcg1993hymnals.length">
+    No WCG (1993) hymns yet, why don't you <a ui-sref="wcg1993hymnals.create">create one</a>?
+  </div>
+</section>
+

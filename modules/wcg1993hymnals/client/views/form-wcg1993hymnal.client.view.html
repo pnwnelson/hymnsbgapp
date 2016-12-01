@@ -1,0 +1,78 @@
+<section>
+  <div class="page-header">
+    <h4>{{vm.wcg1993hymnal._id ? 'Edit WCG (1993) Hymn' : 'Create New WCG (1993) Hymnal Hymn'}}</h4>
+  </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <form name="vm.form.wcg1993hymnalForm" class="" ng-submit="vm.save(vm.form.wcg1993hymnalForm.$valid)" novalidate>
+        <fieldset>
+        <div class="row">
+        <div class="form-group col-xs-3 col-sm-3" show-errors>
+            <label class="control-label" for="page">Page Number</label>
+            <input name="page" type="number" ng-model="vm.wcg1993hymnal.page" id="page" class="form-control" placeholder="Pg #" required>
+            <div ng-messages="vm.form.wcg1993hymnalForm.page.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Hymn page number is required.</p>
+            </div>
+        </div>
+        <div class="form-group col-xs-9 col-sm-9">
+            <label class="control-label" for="popular">Check if popular</label><br>
+            <input name="popular" type="checkbox" ng-model="vm.wcg1993hymnal.popular" id="popular" >
+        </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="name">Hymn Title</label>
+            <input name="title" type="text" ng-model="vm.wcg1993hymnal.title" id="title" class="form-control" placeholder="Hymn title" required>
+            <div ng-messages="vm.form.wcg1993hymnalForm.title.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Hymn title is required.</p>
+            </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="author">Hymn Author</label>
+            <input name="author" type="text" ng-model="vm.wcg1993hymnal.author" id="author" class="form-control" placeholder="Name of author" required>
+            <div ng-messages="vm.form.wcg1993hymnalForm.author.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Hymn author is required.</p>
+            </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="authorInfo">Author Information</label>
+            <textarea name="authorInfo" rows="4" ng-model="vm.wcg1993hymnal.authorInfo" id="authorInfo" class="form-control" placeholder="Enter author information" required></textarea>
+            <div ng-messages="vm.form.wcg1993hymnalForm.authorInfo.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Author information is required.</p>
+            </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.wcg1993hymnal._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="col-sm-2"></div>
+</section>
+<!--
+<section>
+  <div class="page-header">
+    <h1>{{vm.wcg1993hymnal._id ? 'Edit Wcg1993hymnal' : 'New Wcg1993hymnal'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.wcg1993hymnalForm" class="form-horizontal" ng-submit="vm.save(vm.form.wcg1993hymnalForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Name</label>
+          <input name="name" type="text" ng-model="vm.wcg1993hymnal.name" id="name" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.wcg1993hymnalForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Wcg1993hymnal name is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.wcg1993hymnal._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section> -->

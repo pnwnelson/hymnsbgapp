@@ -70,6 +70,7 @@ a:hover .header-profile-image {
 .navbar-brand {
   padding: 10px 40px;
   font-size: 19px;
+  font-weight: 300;
 }
 
 .navbar-inverse .navbar-brand {
@@ -92,6 +93,10 @@ a:hover .header-profile-image {
 
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
   background-color: #5F9EA0;
+}
+
+.navbar-inverse {
+  background: #FFC797;
 }
 
 .hymnTitle {
@@ -131,7 +136,7 @@ a:hover .header-profile-image {
 .btn-primary {
   width: 150px;
   margin: 10px;
-  font-weight: lighter;
+  font-weight: 300;
   border: none;
   border-radius: 0px;
   background: #5F9EA0;

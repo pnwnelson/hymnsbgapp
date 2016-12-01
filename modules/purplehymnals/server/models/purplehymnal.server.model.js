@@ -14,7 +14,7 @@ var PurplehymnalSchema = new Schema({
     type: Number,
     required: 'Please enter page number'
   },
-  popular: {
+  approved: {
     type: String
   },
   title: {

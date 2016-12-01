@@ -14,7 +14,7 @@ var Wcg1993hymnalSchema = new Schema({
     type: Number,
     required: 'Please enter page number'
   },
-  popular: {
+  approved: {
     type: String
   },
   title: {

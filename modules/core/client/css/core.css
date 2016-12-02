@@ -142,6 +142,16 @@ a:hover .header-profile-image {
   background: #5F9EA0;
 }
 
+.btn-secondary {
+  width: 150px;
+  margin: 10px
+  font-weight lighter;
+  border: 1px solid #cfe1e2;
+  background: none;
+  border-radius: 0px;
+  color: #cfe1e2;
+}
+
 h5 {
   font-weight: lighter;
   font-size: 18px;

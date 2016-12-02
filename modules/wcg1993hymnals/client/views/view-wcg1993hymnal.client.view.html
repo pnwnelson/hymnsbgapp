@@ -1,17 +1,26 @@
 <section >
   <div class="detail-page-header text-center">
-    <a href="/wcg1993hymnals" class="btn btn-primary btn-sm" role="button"><i class="glyphicon glyphicon-backward"></i><span> New search</span></a><h4>WCG (1993) Hymnal</h4>
+    <h4>WCG (1993) Hymnal</h4>
+    <a href="/wcg1993hymnals" class="btn btn-primary btn-sm" role="button"><i class="glyphicon glyphicon-backward"></i><span> New search</span></a>
+    <br>
+    <br>
+    <a class="btn btn-secondary btn-xs"
+       ui-sref="wcg1993hymnals.edit({ wcg1993hymnalId: vm.wcg1993hymnal._id })">
+      <i class="glyphicon glyphicon-edit"></i> Update this hymn
+    </a>
   </div>
-  <div class="pull-right"
+  <!-- <div class="pull-right"
        ng-show="vm.wcg1993hymnal.isCurrentUserOwner">
-    <a class="btn btn-primary"
+  <div class="pull-right">
+    <a class="btn btn-sm"
        ui-sref="wcg1993hymnals.edit({ wcg1993hymnalId: vm.wcg1993hymnal._id })">
       <i class="glyphicon glyphicon-edit"></i>
     </a>
-    <a class="btn btn-primary" ng-click="vm.remove()">
+    <a class="btn btn-sm" ng-click="vm.remove()">
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>
+  -->
   <div class="text-center page-wrapper"><span class="detail-page-category">Page</span><p class="page" ng-bind="vm.wcg1993hymnal.page">{{vm.wcg1993hymnal.page}}</p></div>
   <div class="text-center popular">Approved: <span class="lead" ng-bind="vm.wcg1993hymnal.approved"></span></div>
   <div class="text-center"><span class="detail-page-category">Title</span><p class="lead" ng-bind="vm.wcg1993hymnal.title"></p></div>

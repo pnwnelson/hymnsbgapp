@@ -28,7 +28,7 @@ exports.invokeRolesPolicies = function () {
       permissions: ['get', 'post']
     }, {
       resources: '/api/wcg1993hymnals/:wcg1993hymnalId',
-      permissions: ['get']
+      permissions: ['get','post','put']
     }]
   }, {
     roles: ['guest'],
@@ -49,9 +49,9 @@ exports.isAllowed = function (req, res, next) {
   var roles = (req.user) ? req.user.roles : ['guest'];
 
   // If an Wcg1993hymnal is being processed and the current user created it then allow any manipulation
-  if (req.wcg1993hymnal && req.user && req.wcg1993hymnal.user && req.wcg1993hymnal.user.id === req.user.id) {
-    return next();
-  }
+  //if (req.wcg1993hymnal && req.user && req.wcg1993hymnal.user && req.wcg1993hymnal.user.id === req.user.id) {
+  //  return next();
+  //}
 
   // Check for user roles
   acl.areAnyRolesAllowed(roles, req.route.path, req.method.toLowerCase(), function (err, isAllowed) {

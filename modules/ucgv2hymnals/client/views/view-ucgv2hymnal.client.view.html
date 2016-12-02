@@ -1,17 +1,26 @@
 <section >
   <div class="detail-page-header text-center">
-    <a href="/ucgv2hymnals" class="btn btn-primary btn-sm" role="button"><i class="glyphicon glyphicon-backward"></i><span> New search</span></a><h4>UCG (2nd Ed.) Hymnal</h4>
+    <h4>UCG (2nd Ed.) Hymnal</h4>
+    <a href="/ucgv2hymnals" class="btn btn-primary btn-sm" role="button"><i class="glyphicon glyphicon-backward"></i><span> New search</span></a>
+    <br>
+    <br>
+    <a class="btn btn-secondary btn-xs"
+       ui-sref="ucgv2hymnals.edit({ ucgv2hymnalId: vm.ucgv2hymnal._id })">
+      <i class="glyphicon glyphicon-edit"></i> Update this hymn
+    </a>
   </div>
-  <div class="pull-right"
+  <!-- <div class="pull-right"
        ng-show="vm.ucgv2hymnal.isCurrentUserOwner">
-    <a class="btn btn-primary"
+  <div class="pull-right">
+    <a class="btn btn-sm"
        ui-sref="ucgv2hymnals.edit({ ucgv2hymnalId: vm.ucgv2hymnal._id })">
       <i class="glyphicon glyphicon-edit"></i>
     </a>
-    <a class="btn btn-primary" ng-click="vm.remove()">
+    <a class="btn btn-sm" ng-click="vm.remove()">
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>
+  -->
   <div class="text-center page-wrapper"><span class="detail-page-category">Page</span><p class="page" ng-bind="vm.ucgv2hymnal.page">{{vm.ucgv2hymnal.page}}</p></div>
   <div class="text-center popular">Approved: <span class="lead" ng-bind="vm.ucgv2hymnal.approved"></span></div>
   <div class="text-center"><span class="detail-page-category">Title</span><p class="lead" ng-bind="vm.ucgv2hymnal.title"></p></div>

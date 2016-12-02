@@ -1,0 +1,53 @@
+<section>
+  <div class="page-header">
+    <h4>{{vm.lcghymnal._id ? 'Edit LCG Hymn' : 'Create New LCG Hymnal Hymn'}}</h4>
+  </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <form name="vm.form.lcghymnalForm" class="" ng-submit="vm.save(vm.form.lcghymnalForm.$valid)" novalidate>
+        <fieldset>
+        <div class="row">
+        <div class="form-group col-xs-3 col-sm-3" show-errors>
+            <label class="control-label" for="page">Page Number</label>
+            <input name="page" type="number" ng-model="vm.lcghymnal.page" id="page" class="form-control" placeholder="Pg #" required>
+            <div ng-messages="vm.form.lcghymnalForm.page.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Hymn page number is required.</p>
+            </div>
+        </div>
+        <div class="form-group col-xs-9 col-sm-9">
+            <label class="control-label" for="approved">Check if approved</label><br>
+            <input name="approved" type="checkbox" ng-model="vm.lcghymnal.approved" id="approved" >
+        </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="name">Hymn Title</label>
+            <input name="title" type="text" ng-model="vm.lcghymnal.title" id="title" class="form-control" placeholder="Hymn title" required>
+            <div ng-messages="vm.form.lcghymnalForm.title.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Hymn title is required.</p>
+            </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="author">Hymn Author</label>
+            <input name="author" type="text" ng-model="vm.lcghymnal.author" id="author" class="form-control" placeholder="Name of author" required>
+            <div ng-messages="vm.form.lcghymnalForm.author.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Hymn author is required.</p>
+            </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="authorInfo">Author Information</label>
+            <textarea name="authorInfo" rows="4" ng-model="vm.lcghymnal.authorInfo" id="authorInfo" class="form-control" placeholder="Enter author information" required></textarea>
+            <div ng-messages="vm.form.lcghymnalForm.authorInfo.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Author information is required.</p>
+            </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.lcghymnal._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="col-sm-2"></div>
+</section>

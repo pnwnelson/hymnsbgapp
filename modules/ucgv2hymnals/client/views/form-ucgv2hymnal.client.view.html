@@ -1,0 +1,53 @@
+<section>
+  <div class="page-header">
+    <h4>{{vm.ucgv2hymnal._id ? 'Edit UCG (2nd Ed.) Hymn' : 'Create New UCG (2nd Ed.) Hymnal Hymn'}}</h4>
+  </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <form name="vm.form.ucgv2hymnalForm" class="" ng-submit="vm.save(vm.form.ucgv2hymnalForm.$valid)" novalidate>
+        <fieldset>
+        <div class="row">
+        <div class="form-group col-xs-3 col-sm-3" show-errors>
+            <label class="control-label" for="page">Page Number</label>
+            <input name="page" type="number" ng-model="vm.ucgv2hymnal.page" id="page" class="form-control" placeholder="Pg #" required>
+            <div ng-messages="vm.form.ucgv2hymnalForm.page.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Hymn page number is required.</p>
+            </div>
+        </div>
+        <div class="form-group col-xs-9 col-sm-9">
+            <label class="control-label" for="approved">Check if approved</label><br>
+            <input name="approved" type="checkbox" ng-model="vm.ucgv2hymnal.approved" id="approved" >
+        </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="name">Hymn Title</label>
+            <input name="title" type="text" ng-model="vm.ucgv2hymnal.title" id="title" class="form-control" placeholder="Hymn title" required>
+            <div ng-messages="vm.form.ucgv2hymnalForm.title.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Hymn title is required.</p>
+            </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="author">Hymn Author</label>
+            <input name="author" type="text" ng-model="vm.ucgv2hymnal.author" id="author" class="form-control" placeholder="Name of author" required>
+            <div ng-messages="vm.form.ucgv2hymnalForm.author.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Hymn author is required.</p>
+            </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="authorInfo">Author Information</label>
+            <textarea name="authorInfo" rows="4" ng-model="vm.ucgv2hymnal.authorInfo" id="authorInfo" class="form-control" placeholder="Enter author information" required></textarea>
+            <div ng-messages="vm.form.ucgv2hymnalForm.authorInfo.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Author information is required.</p>
+            </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.ucgv2hymnal._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="col-sm-2"></div>
+</section>

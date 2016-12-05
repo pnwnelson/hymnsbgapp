@@ -22,11 +22,11 @@
   </div>
   -->
   <div class="text-center page-wrapper"><span class="detail-page-category">Page</span><p class="page" ng-bind="vm.cogwahymnal.page">{{vm.cogwahymnal.page}}</p></div>
-  <div class="text-center approved" ng-show="vm.wcg1993hymnal.approved == 'true'">Clean <span class="lead"></span></div>
+  <div class="text-center approved" ng-show="vm.cogwahymnal.approved == 'true'">Clean <span class="lead"></span></div>
 
-  <div class="text-center not-approved" ng-show="vm.wcg1993hymnal.approved == 'false'" >Unlcean <span class="lead"></span></div>
+  <div class="text-center not-approved" ng-show="vm.cogwahymnal.approved == 'false'" >Unlcean <span class="lead"></span></div>
 
-  <div class="text-center null" ng-show="vm.wcg1993hymnal.approved == 'null'">You Decide <span class="lead"></span></div>
+  <div class="text-center null" ng-show="vm.cogwahymnal.approved == 'null'">You Decide <span class="lead"></span></div>
   <div class="text-center"><span class="detail-page-category">Title</span><p class="lead" ng-bind="vm.cogwahymnal.title"></p></div>
   <div class="text-center"><span class="detail-page-category">Author</span><p class="lead" ng-bind="vm.cogwahymnal.author"></p></div>
   <div class="text-center"><span class="detail-page-category">Author/Hymn Information</span></div><p class="lead author-hymn-info" ng-bind="vm.cogwahymnal.authorInfo"></p>

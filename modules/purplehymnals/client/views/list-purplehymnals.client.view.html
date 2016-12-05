@@ -9,7 +9,7 @@
     </div>
     <div class="col-xs-4"></div>
     <div class="col-xs-4 text-center">
-      <input class="form-control" ng-model="searchText" type="number" value="Page Number" id="page-number" placeholder="Enter pg #"><br>
+      <input class="form-control" ng-model="search.page" type="number" id="page-number" placeholder="Enter pg #"><br>
     </div>
     <div class="col-xs-4"></div>
 
@@ -19,7 +19,7 @@
 
   <div class="list-group">
     
-    <a ng-repeat="purplehymnal in vm.purplehymnals | filter:searchText"
+    <a ng-repeat="purplehymnal in vm.purplehymnals | filter:search"
        ui-sref="purplehymnals.view({ purplehymnalId: purplehymnal._id })"
        class="list-group-item">
       <!-- <small class="list-group-item-text">

@@ -111,6 +111,30 @@ a:hover .header-profile-image {
   border: solid gray 1px;
 }
 
+/* hymn status */
+.approved {
+  border: 1px dotted green;
+  border-radius: 3px;
+  margin: 20px;
+  padding: 3px;
+  color: green;
+}
+
+.not-approved {
+  border: 1px dotted red;
+  border-radius: 3px;
+  margin: 20px;
+  padding: 3px;
+  color: red;
+}
+
+.null {
+  border: 1px dotted gray;
+  border-radius: 3px;
+  margin: 20px;
+  padding: 3px;
+}
+
 .hymnAuthor {
   border: solid gray 1px;
 }

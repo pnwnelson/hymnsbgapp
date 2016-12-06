@@ -28,7 +28,7 @@ exports.invokeRolesPolicies = function () {
       permissions: ['get', 'post']
     }, {
       resources: '/api/lcghymnals/:lcghymnalId',
-      permissions: ['get']
+      permissions: ['get','post','put']
     }]
   }, {
     roles: ['guest'],

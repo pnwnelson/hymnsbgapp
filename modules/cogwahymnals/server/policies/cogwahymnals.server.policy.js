@@ -28,7 +28,7 @@ exports.invokeRolesPolicies = function () {
       permissions: ['get', 'post']
     }, {
       resources: '/api/cogwahymnals/:cogwahymnalId',
-      permissions: ['get']
+      permissions: ['get','post','put']
     }]
   }, {
     roles: ['guest'],

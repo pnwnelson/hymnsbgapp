@@ -28,7 +28,7 @@ exports.invokeRolesPolicies = function () {
       permissions: ['get', 'post']
     }, {
       resources: '/api/purplehymnals/:purplehymnalId',
-      permissions: ['get']
+      permissions: ['get','post','put']
     }]
   }, {
     roles: ['guest'],

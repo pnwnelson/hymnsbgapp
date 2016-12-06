@@ -28,7 +28,9 @@
         <span ng-if="purplehymnal.user" ng-bind="purplehymnal.user.displayName"></span>
         <span ng-if="!purplehymnal.user">Deleted User</span>
       </small> -->
-      <div class="list-group-item-heading list-page-label">Page: <span class="list-page-number" ng-bind="wcg1993hymnal.page"></span></div>
+      <div class="list-group-item-heading list-page-label">
+      Page: <span class="list-page-number" ng-bind="wcg1993hymnal.page"></span> - 
+      <span class="list-page-number" ng-bind="wcg1993hymnal.title"></div>
     </a>
   </div>
   <div class="alert alert-warning text-center" ng-if="vm.wcg1993hymnals.$resolved && !vm.wcg1993hymnals.length">

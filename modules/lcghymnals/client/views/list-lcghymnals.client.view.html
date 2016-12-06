@@ -21,7 +21,10 @@
     <a ng-repeat="lcghymnal in vm.lcghymnals | filter:search"
        ui-sref="lcghymnals.view({ lcghymnalId: lcghymnal._id })"
        class="list-group-item">
-      <div class="list-group-item-heading list-page-label">Page: <span class="list-page-number" ng-bind="lcghymnal.page"></span></div>
+      <div class="list-group-item-heading list-page-label">
+      Page: <span class="list-page-number" ng-bind="lcghymnal.page"></span> - 
+      <span class="list-page-number" ng-bind="lcghymnal.title"></span>
+      </div>
     </a>
   </div>
   <div class="alert alert-warning text-center" ng-if="vm.lcghymnals.$resolved && !vm.lcghymnals.length">

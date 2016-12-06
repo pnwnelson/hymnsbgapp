@@ -21,7 +21,9 @@
     <a ng-repeat="cogwahymnal in vm.cogwahymnals | filter:search"
        ui-sref="cogwahymnals.view({ cogwahymnalId: cogwahymnal._id })"
        class="list-group-item">
-      <div class="list-group-item-heading list-page-label">Page: <span class="list-page-number" ng-bind="cogwahymnal.page"></span></div>
+      <div class="list-group-item-heading list-page-label">
+      Page: <span class="list-page-number" ng-bind="cogwahymnal.page"></span> - 
+      <span class="list-page-number" ng-bind="cogwahymnal.title"></div>
     </a>
   </div>
   <div class="alert alert-warning text-center" ng-if="vm.cogwahymnals.$resolved && !vm.cogwahymnals.length">

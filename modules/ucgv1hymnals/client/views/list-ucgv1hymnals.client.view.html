@@ -21,7 +21,10 @@
     <a ng-repeat="ucgv1hymnal in vm.ucgv1hymnals | filter:search"
        ui-sref="ucgv1hymnals.view({ ucgv1hymnalId: ucgv1hymnal._id })"
        class="list-group-item">
-      <div class="list-group-item-heading list-page-label">Page: <span class="list-page-number" ng-bind="ucgv1hymnal.page"></span></div>
+      <div class="list-group-item-heading list-page-label">
+      Page: <span class="list-page-number" ng-bind="ucgv1hymnal.page"></span> - 
+      <span class="list-page-number" ng-bind="ucgv1hymnal.title"></span>
+      </div>
     </a>
   </div>
   <div class="alert alert-warning text-center" ng-if="vm.ucgv1hymnals.$resolved && !vm.ucgv1hymnals.length">

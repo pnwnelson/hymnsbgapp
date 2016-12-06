@@ -99,11 +99,64 @@ a:hover .header-profile-image {
   background: #FFC797;
 }
 
+/* pages layout */
+
+.top-info-wrapper {
+  padding: 15px;
+}
+
+.top-info-right-wrapper {
+  padding: 10px;
+}
+
+.page-block-clean {
+  background: rgba(8,130,8,.50);
+  width: 70px;
+  height: 60px;
+  border-radius: 3px;
+  padding: 7px;
+}
+
+.page-block-unclean {
+  background: rgba(200,28,28,0.50);
+  width: 70px;
+  height: 60px;
+  border-radius: 3px;
+  padding: 7px;
+}
+
+.page-block-null {
+  background: lightgray;
+  width: 70px;
+  height: 60px;
+  border-radius: 3px;
+  padding: 7px;
+}
+
+.page {
+  font-size: 28px;
+  color: white;
+}
+
+.lead {
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .hymnTitle {
-  font-size: 16px;
-  font-weight: bold;
-  border: solid black 1px;
-  height: 30px;
+  font-size: 14px;
+  padding: 3px;
+}
+
+.hymnAuthor {
+  font-size: 14px;
+  padding: 3px;
+  font-weight: 300;
+}
+
+.hymnAuthorInfo {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .hymnStatus {
@@ -135,17 +188,17 @@ a:hover .header-profile-image {
   padding: 3px;
 }
 
-.hymnAuthor {
-  border: solid gray 1px;
+.update-hymn {
+  margin: 15px;
+  padding: 3px;
+}
+
+.update-hymn > a {
+  color: lightgray;
 }
 
 .hymnAuthorName {
   font-size: 12px;
-}
-
-.hymnAuthorInfo {
-  font-size: 12px;
-  font-style: initial;
 }
 
 .mainButtons {
@@ -158,17 +211,22 @@ a:hover .header-profile-image {
 }
 
 .btn-primary {
-  width: 150px;
+  width: 175px;
   margin: 10px;
-  font-weight: 300;
-  border: none;
-  border-radius: 0px;
-  background: #5F9EA0;
+  font-weight: lighter;
+  font-size: 18px;
+  border: 1px solid;
+  border-radius: 3px;
+  /* background: rgba(67,152,152,0.75); */
+  color: rgba(67,152,152,0.75);
+  background: none;
+  text-shadow: none;
+
 }
 
 .btn-secondary {
-  width: 150px;
-  margin: 10px
+  width: 85%;
+  margin: 20px
   font-weight lighter;
   border: 1px solid #cfe1e2;
   background: none;
@@ -177,7 +235,7 @@ a:hover .header-profile-image {
 }
 
 h5 {
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 18px;
   padding: 10px;
 }
@@ -185,7 +243,7 @@ h5 {
 h4 {
   color: gray;
   padding: 15px;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 h3 {
@@ -195,6 +253,10 @@ h3 {
 
 .page-header {
   width: 80%;
+}
+
+.search-label {
+  font-weight: 300;
 }
 
 

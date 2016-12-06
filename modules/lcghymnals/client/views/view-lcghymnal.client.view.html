@@ -21,13 +21,42 @@
     </a>
   </div>
   -->
-  <div class="text-center page-wrapper"><span class="detail-page-category">Page</span><p class="page" ng-bind="vm.lcghymnal.page">{{vm.lcghymnal.page}}</p></div>
-  <div class="text-center approved" ng-show="vm.lcghymnal.approved == 'true'">Clean <span class="lead"></span></div>
+  <div class="row top-info-wrapper">
+    <!-- only one page-block-* div is shown depending on approved property -->
+    <div class="col-xs-3 page-block-clean" ng-show="vm.lcghymnal.approved == 'true'">
+      <p class="page text-center" ng-bind="vm.lcghymnal.page">{{vm.lcghymnal.page}}</p>
+    </div>
+    <div class="col-xs-3 page-block-unclean" ng-show="vm.lcghymnal.approved == 'false'">
+      <p class="page text-center" ng-bind="vm.lcghymnal.page">{{vm.lcghymnal.page}}</p>
+    </div>
+    <div class="col-xs-3 page-block-null" ng-show="vm.lcghymnal.approved == 'null'">
+      <p class="page text-center" ng-bind="vm.lcghymnal.page">{{vm.lcghymnal.page}}</p>
+    </div>
+    <div class="col-xs-9 top-info-right-wrapper">
+      <div class="row">
+        <div class="col-xs-12">
+          <span class="hymnTitle">{{vm.lcghymnal.title}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <span class="hymnAuthor">{{vm.lcghymnal.author}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <div class="text-center not-approved" ng-show="vm.lcghymnal.approved == 'false'" >Unlcean <span class="lead"></span></div>
+  <div class="row">
+    <div class="col-xs-12">
+      <span class="hymnAuthorInfo">{{vm.lcghymnal.authorInfo}}</span>
+    </div>
+  </div>
 
-  <div class="text-center null" ng-show="vm.lcghymnal.approved == 'null'">You Decide <span class="lead"></span></div>
-  <div class="text-center"><span class="detail-page-category">Title</span><p class="lead" ng-bind="vm.lcghymnal.title"></p></div>
-  <div class="text-center"><span class="detail-page-category">Author</span><p class="lead" ng-bind="vm.lcghymnal.author"></p></div>
-  <div class="text-center"><span class="detail-page-category">Author/Hymn Information</span></div><p class="lead author-hymn-info" ng-bind="vm.lcghymnal.authorInfo"></p>
+  <div class="row">
+    <div class="col-xs-12 update-hymn">
+      <a ui-sref="lcghymnals.edit({ lcghymnalId: vm.lcghymnal._id })">
+        <i class="glyphicon glyphicon-edit"></i> Update this hymn
+      </a>
+    </div>
+  </div>
 </section>

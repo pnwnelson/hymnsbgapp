@@ -1,14 +1,9 @@
 <section >
   <div class="detail-page-header text-center">
+    <a href="/wcg1993hymnals" class="btn btn-primary btn-xl" role="button"><i class="glyphicon glyphicon-backward"></i><span> New search</span></a>
     <h4>WCG (1993) Hymnal</h4>
-    <a href="/wcg1993hymnals" class="btn btn-primary btn-sm" role="button"><i class="glyphicon glyphicon-backward"></i><span> New search</span></a>
-    <br>
-    <br>
-    <a class="btn btn-secondary btn-xs"
-       ui-sref="wcg1993hymnals.edit({ wcg1993hymnalId: vm.wcg1993hymnal._id })">
-      <i class="glyphicon glyphicon-edit"></i> Update this hymn
-    </a>
   </div>
+  <hr>
   <!-- <div class="pull-right"
        ng-show="vm.wcg1993hymnal.isCurrentUserOwner">
   <div class="pull-right">
@@ -21,7 +16,54 @@
     </a>
   </div>
   -->
+
+  <div class="row top-info-wrapper">
+    <!-- only one page-block-* div is shown depending on approved property -->
+    <div class="col-xs-3 page-block-clean" ng-show="vm.wcg1993hymnal.approved == 'true'">
+      <p class="page text-center" ng-bind="vm.wcg1993hymnal.page">{{vm.wcg1993hymnal.page}}</p>
+    </div>
+    <div class="col-xs-3 page-block-unclean" ng-show="vm.wcg1993hymnal.approved == 'false'">
+      <p class="page text-center" ng-bind="vm.wcg1993hymnal.page">{{vm.wcg1993hymnal.page}}</p>
+    </div>
+    <div class="col-xs-3 page-block-null" ng-show="vm.wcg1993hymnal.approved == 'null'">
+      <p class="page text-center" ng-bind="vm.wcg1993hymnal.page">{{vm.wcg1993hymnal.page}}</p>
+    </div>
+    <div class="col-xs-9 top-info-right-wrapper">
+      <div class="row">
+        <div class="col-xs-12">
+          <span class="hymnTitle">{{vm.wcg1993hymnal.title}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <span class="hymnAuthor">{{vm.wcg1993hymnal.author}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <span class="hymnAuthorInfo">{{vm.wcg1993hymnal.authorInfo}}</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 update-hymn">
+      <a ui-sref="wcg1993hymnals.edit({ wcg1993hymnalId: vm.wcg1993hymnal._id })">
+        <i class="glyphicon glyphicon-edit"></i> Update this hymn
+      </a>
+    </div>
+  </div>
+
+<!-- 
   <div class="text-center page-wrapper"><span class="detail-page-category">Page</span><p class="page" ng-bind="vm.wcg1993hymnal.page">{{vm.wcg1993hymnal.page}}</p></div>
+
+  <div class="text-center update-hymn">
+    <a ui-sref="wcg1993hymnals.edit({ wcg1993hymnalId: vm.wcg1993hymnal._id })">
+        <i class="glyphicon glyphicon-edit"></i> Update this hymn
+    </a>
+  </div>
 
   <div class="text-center approved" ng-show="vm.wcg1993hymnal.approved == 'true'">Clean <span class="lead"></span></div>
 
@@ -32,4 +74,6 @@
   <div class="text-center"><span class="detail-page-category">Title</span><p class="lead" ng-bind="vm.wcg1993hymnal.title"></p></div>
   <div class="text-center"><span class="detail-page-category">Author</span><p class="lead" ng-bind="vm.wcg1993hymnal.author"></p></div>
   <div class="text-center"><span class="detail-page-category">Author/Hymn Information</span></div><p class="lead author-hymn-info" ng-bind="vm.wcg1993hymnal.authorInfo"></p>
+
+  -->
 </section>

@@ -11,13 +11,6 @@ h4 {
 	margin: 30px;
 }
 
-.popular {
-	border: 1px dotted gray;
-	border-radius: 3px;
-	margin: 20px;
-	padding: 3px;
-}
-
 .author-hymn-info {
 	margin-left: 20px;
 	margin-right: 20px;
@@ -38,9 +31,7 @@ h4 {
 	font-style: bold;
 }
 
-.page {
-	font-size: 36px;
-}
+
 
 .page-wrapper {
 	margin: 20px;

@@ -4,22 +4,21 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-12 text-center">
-      <p>Search Page #</p>
-    </div>
-    <div class="col-xs-4"></div>
     <div class="col-xs-4 text-center">
-      <input class="form-control" ng-model="searchText" type="number" value="Page Number" id="page-number" placeholder="Enter pg #"><br>
+      <label class="search-label pull-left">Search Pg #</label>
+      <input class="form-control" ng-model="search.page" type="number" id="page-number" placeholder="Enter pg #"><br>
     </div>
-    <div class="col-xs-4"></div>
-
+    <div class="col-xs-8 text-center">
+      <label class="search-label pull-left">Search Title</label>
+      <input class="form-control" ng-model="search.title" type="string" id="title" placeholder="Enter title keyword"><br>
+    </div>
   </div>
 
   <hr>
 
   <div class="list-group">
     
-    <a ng-repeat="lcghymnal in vm.lcghymnals | filter:searchText"
+    <a ng-repeat="lcghymnal in vm.lcghymnals | filter:search"
        ui-sref="lcghymnals.view({ lcghymnalId: lcghymnal._id })"
        class="list-group-item">
       <div class="list-group-item-heading list-page-label">Page: <span class="list-page-number" ng-bind="lcghymnal.page"></span></div>

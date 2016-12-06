@@ -189,8 +189,7 @@ a:hover .header-profile-image {
 }
 
 .update-hymn {
-  margin: 15px;
-  padding: 3px;
+  padding: 15px;
 }
 
 .update-hymn > a {
@@ -213,7 +212,7 @@ a:hover .header-profile-image {
 .btn-primary {
   width: 175px;
   margin: 10px;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 18px;
   border: 1px solid;
   border-radius: 3px;

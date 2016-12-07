@@ -12,6 +12,10 @@ module.exports = function(app) {
     .get(wcg1993hymnals.list)
     .post(wcg1993hymnals.create);
 
+  //ADDED BY ME
+  //app.route('/api/purplehymnals/search').all(purplehymnalsPolicy.isAllowed)
+  //  .get(purplehymnals.search);
+
   app.route('/api/wcg1993hymnals/:wcg1993hymnalId').all(wcg1993hymnalsPolicy.isAllowed)
     .get(wcg1993hymnals.read)
     .put(wcg1993hymnals.update)

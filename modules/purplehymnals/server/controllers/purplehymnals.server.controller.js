@@ -16,7 +16,6 @@ exports.create = function(req, res) {
   var purplehymnal = new Purplehymnal(req.body);
   purplehymnal.user = req.user;
 
-
   purplehymnal.save(function(err) {
     if (err) {
       return res.status(400).send({

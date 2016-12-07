@@ -91,6 +91,11 @@ a:hover .header-profile-image {
   color: white;
 }
 
+.navbar-inverse .navbar-nav > .active > a {
+  box-shadow: none;
+  background-image: none;
+}
+
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
   background-color: #5F9EA0;
 }

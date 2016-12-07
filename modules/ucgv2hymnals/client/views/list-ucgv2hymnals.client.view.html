@@ -1,19 +1,31 @@
 <section>
-  <div class="detail-page-header text-center">
-    <a href="/" class="btn btn-primary btn-sm" role="button"><i class="glyphicon glyphicon-backward"></i><span> Choose hymnal</span></a><h4>UCG (2nd Ed.) Hymnal</h4>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-4 text-center">
-      <label class="search-label pull-left">Search Pg #</label>
-      <input class="form-control" ng-model="search.page" type="number" id="page-number" placeholder="Enter pg #"><br>
+<div class="row">
+  <div class="col-sm-2 col-md-3 col-lg-3"></div>
+  <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+    <div class="row top-wrapper">
+      <div class="col-xs-8 pull-left">
+        <div class="list-page-header text-center">
+          <a href="/" class="btn btn-secondary btn-sm" role="button">
+            <i class="glyphicon glyphicon-backward"></i><span> Choose hymnal</span>
+          </a>
+          <h4>UCG (2nd Ed.) Hymnal</h4>
+        </div>
+      </div>
+      <div class="col-xs-4 push-right">
+        <img class="hymnal-cover" src="./modules/core/client/img/ucgv2hymnalcover.png">
+      </div>
     </div>
-    <div class="col-xs-8 text-center">
-      <label class="search-label pull-left">Search Title</label>
-      <input class="form-control" ng-model="search.title" type="string" id="title" placeholder="Enter title keyword"><br>
+    <hr>
+    <div class="row">
+      <div class="col-xs-4 text-center">
+        <label class="search-label pull-left">Search Pg #</label>
+        <input class="form-control" ng-model="search.page" type="number" id="page-number" placeholder="Enter pg #"><br>
+      </div>
+      <div class="col-xs-8 text-center">
+        <label class="search-label pull-left">Search Title</label>
+        <input class="form-control" ng-model="search.title" type="string" id="title" placeholder="Enter title keyword"><br>
+      </div>
     </div>
-  </div>
-
   <hr>
 
   <div class="list-group">
@@ -36,4 +48,7 @@
   <div class="alert alert-warning text-center" ng-if="vm.ucgv2hymnals.$resolved && !vm.ucgv2hymnals.length">
     No UCG (2nd Ed.) hymns yet, why don't you <a ui-sref="ucgv2hymnals.create">create one</a>?
   </div>
+  </div>
+  <div class="col-sm-2 col-md-3 col-lg-3"></div>
+</div>
 </section>

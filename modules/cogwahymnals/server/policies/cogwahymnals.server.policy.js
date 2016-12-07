@@ -49,9 +49,9 @@ exports.isAllowed = function (req, res, next) {
   var roles = (req.user) ? req.user.roles : ['guest'];
 
   // If an Cogwahymnal is being processed and the current user created it then allow any manipulation
-  if (req.cogwahymnal && req.user && req.cogwahymnal.user && req.cogwahymnal.user.id === req.user.id) {
-    return next();
-  }
+  //if (req.cogwahymnal && req.user && req.cogwahymnal.user && req.cogwahymnal.user.id === req.user.id) {
+  //  return next();
+  //}
 
   // Check for user roles
   acl.areAnyRolesAllowed(roles, req.route.path, req.method.toLowerCase(), function (err, isAllowed) {

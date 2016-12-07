@@ -62,7 +62,6 @@ a:hover .header-profile-image {
   border-color: #FFC797;
 }
 
-
 .navbar-inverse .navbar-nav > li > a {
   color: black;
 }
@@ -109,8 +108,6 @@ a:hover .header-profile-image {
 .top-info-wrapper {
   padding: 15px;
 }
-
-
 
 .top-info-right-wrapper {
   padding: 10px;
@@ -250,6 +247,7 @@ h4 {
   color: gray;
   padding: 15px;
   font-weight: 300;
+  font-size: 19px;
 }
 
 h3 {
@@ -269,6 +267,35 @@ h3 {
   width: 45px;
   top: 30px;
   position: relative;
+}
+
+.detail-page-header {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.list-page-header {
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  h4 {
+    font-size: 34px;
+  }
+
+  .hymnal-cover {
+    width: 70px;
+    position: absolute;
+    right: 15px;
+  }
+
+  .detail-page-header {
+    text-align: left;
+  }
+
+  .list-page-header {
+    text-align: left;
+  }
 }
 
 

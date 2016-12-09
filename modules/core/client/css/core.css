@@ -99,6 +99,16 @@ a:hover .header-profile-image {
   background-color: #5F9EA0;
 }
 
+.navbar-inverse .navbar-nav > .open > a {
+  background-image: none;
+  box-shadow: none;
+  background: #FFC797;
+}
+
+.navbar-inverse .navbar-nav > .open a:hover {
+  background: #FFC797;
+}
+
 .navbar-inverse {
   background: #FFC797;
 }

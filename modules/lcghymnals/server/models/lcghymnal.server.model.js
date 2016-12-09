@@ -15,7 +15,8 @@ var LcghymnalSchema = new Schema({
     required: 'Please enter page number'
   },
   approved: {
-    type: String
+    type: String,
+    default: 'false'
   },
   title: {
     type: String,

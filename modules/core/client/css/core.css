@@ -92,11 +92,19 @@ a:hover .header-profile-image {
 
 .navbar-inverse .navbar-nav > .active > a {
   box-shadow: none;
+  background-color: #FFC797;
+  background-image: none;
+}
+
+.navbar-inverse .navbar-nav > .active > a:hover {
+  box-shadow: none;
+  background-color: #FFC797;
   background-image: none;
 }
 
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
   background-color: #5F9EA0;
+  background-image: none;
 }
 
 .navbar-inverse .navbar-nav > .open > a {

@@ -45,6 +45,12 @@
       Page: <span class="list-page-number" ng-bind="purplehymnal.page"></span> - 
       <span class="list-page-number" ng-bind="purplehymnal.title"></span></div>
     </a>
+    <div class="row">
+    <div class="col-xs-12 update-hymn">
+      <a ui-sref="purplehymnals.create({ purplehymnalId: vm.purplehymnal._id })">
+        <i class="glyphicon glyphicon-edit"></i> Add a missing hymn
+      </a>
+    </div>
   </div>
   <div class="alert alert-warning text-center" ng-if="vm.purplehymnals.$resolved && !vm.purplehymnals.length">
     No Purplehymnals yet, why don't you <a ui-sref="purplehymnals.create">create one</a>?

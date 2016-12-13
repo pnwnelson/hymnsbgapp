@@ -40,6 +40,13 @@
       </div>
     </a>
   </div>
+    <div class="row">
+    <div class="col-xs-12 update-hymn">
+      <a ui-sref="lcghymnals.create({ lcghymnalId: vm.lcghymnal._id })">
+        <i class="glyphicon glyphicon-edit"></i> Add a missing hymn
+      </a>
+    </div>
+    </div>
   <div class="alert alert-warning text-center" ng-if="vm.lcghymnals.$resolved && !vm.lcghymnals.length">
     No LCG hymns yet, why don't you <a ui-sref="lcghymnals.create">create one</a>?
   </div>

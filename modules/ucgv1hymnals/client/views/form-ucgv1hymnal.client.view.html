@@ -1,9 +1,12 @@
 <section>
+<div class="row">
+  <div class="col-sm-2 col-md-3 col-lg-3"></div>
+  <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
   <div class="page-header">
-    <h4>{{vm.ucgv1hymnal._id ? 'Edit UCG (1st Ed.) Hymn' : 'Create New UCG (1st Ed.) Hymnal Hymn'}}</h4>
+    <h4>{{vm.ucgv1hymnal._id ? 'Edit UCG (1st Ed.) Hymn' : 'Create New UCG (1st Ed.) Hymn'}}</h4>
   </div>
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8">
+
+    <div class="col-xs-12 col-sm-12">
       <form name="vm.form.ucgv1hymnalForm" class="" ng-submit="vm.save(vm.form.ucgv1hymnalForm.$valid)" novalidate>
         <fieldset>
         <div class="row">
@@ -15,8 +18,14 @@
             </div>
         </div>
         <div class="form-group col-xs-9 col-sm-9">
-            <label class="control-label" for="approved">Check if approved</label><br>
-            <input name="approved" type="checkbox" ng-model="vm.ucgv1hymnal.approved" id="approved" >
+            <input name="approved" type="checkbox" ng-model="vm.ucgv1hymnal.approved" id="approved" ng-true-value="'true'"> 
+            <label class="control-label" for="approved"> Check if approved</label>
+            <br>
+            <input name="not-approved" type="checkbox" ng-model="vm.ucgv1hymnal.approved" id="not-approved" ng-true-value="'false'">
+            <label class="control-label" for="not-approved"> Check if not approved</label>
+            <br>
+            <input name="null" type="checkbox" ng-model="vm.ucgv1hymnal.approved" id="null" ng-true-value="'null'">
+            <label class="control-label" for="null"> Check if you're not sure</label>
         </div>
         </div>
         <div class="form-group" show-errors>
@@ -49,5 +58,6 @@
         </fieldset>
       </form>
     </div>
-    <div class="col-sm-2"></div>
+  <div class="col-sm-2 col-md-3 col-lg-3"></div>
+</div>
 </section>

@@ -45,6 +45,12 @@
         Page: <span class="list-page-number" ng-bind="wcg1993hymnal.page"></span> - 
         <span class="list-page-number" ng-bind="wcg1993hymnal.title"></div>
       </a>
+    <div class="row">
+    <div class="col-xs-12 update-hymn">
+      <a ui-sref="wcg1993hymnals.create({ wcg1993hymnalId: vm.wcg1993hymnal._id })">
+        <i class="glyphicon glyphicon-edit"></i> Add a missing hymn
+      </a>
+    </div>
     </div>
     <div class="alert alert-warning text-center" ng-if="vm.wcg1993hymnals.$resolved && !vm.wcg1993hymnals.length">
       No WCG (1993) hymns yet, why don't you <a ui-sref="wcg1993hymnals.create">create one</a>?

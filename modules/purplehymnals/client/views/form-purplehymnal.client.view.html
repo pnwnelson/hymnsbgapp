@@ -1,22 +1,31 @@
 <section>
+<div class="row">
+  <div class="col-sm-2 col-md-3 col-lg-3"></div>
+  <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
   <div class="page-header">
-    <h4>{{vm.purplehymnal._id ? 'Edit Purple Hymnal Hymn' : 'Create New Purple Hymnal Hymn'}}</h4>
+    <h4>{{vm.purplehymnal._id ? 'Edit Purple Hymn' : 'Create New Purple Hymn'}}</h4>
   </div>
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8">
+
+    <div class="col-xs-12 col-sm-12">
       <form name="vm.form.purplehymnalForm" class="" ng-submit="vm.save(vm.form.purplehymnalForm.$valid)" novalidate>
         <fieldset>
         <div class="row">
-        <div class="form-group col-xs-3 col-sm-2" show-errors>
+        <div class="form-group col-xs-3 col-sm-3" show-errors>
             <label class="control-label" for="page">Page Number</label>
             <input name="page" type="number" ng-model="vm.purplehymnal.page" id="page" class="form-control" placeholder="Pg #" required>
             <div ng-messages="vm.form.purplehymnalForm.page.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Hymn page number is required.</p>
             </div>
         </div>
-        <div class="form-group col-xs-9 col-sm-10">
-            <label class="control-label" for="approved">Check if approved</label><br>
-            <input name="approved" type="checkbox" ng-model="vm.purplehymnal.approved" id="approved" >
+        <div class="form-group col-xs-9 col-sm-9">
+            <input name="approved" type="checkbox" ng-model="vm.purplehymnal.approved" id="approved" ng-true-value="'true'"> 
+            <label class="control-label" for="approved"> Check if approved</label>
+            <br>
+            <input name="not-approved" type="checkbox" ng-model="vm.purplehymnal.approved" id="not-approved" ng-true-value="'false'">
+            <label class="control-label" for="not-approved"> Check if not approved</label>
+            <br>
+            <input name="null" type="checkbox" ng-model="vm.purplehymnal.approved" id="null" ng-true-value="'null'">
+            <label class="control-label" for="null"> Check if you're not sure</label>
         </div>
         </div>
         <div class="form-group" show-errors>
@@ -49,5 +58,6 @@
         </fieldset>
       </form>
     </div>
-    <div class="col-sm-2"></div>
+  <div class="col-sm-2 col-md-3 col-lg-3"></div>
+</div>
 </section>

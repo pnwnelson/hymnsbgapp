@@ -97,7 +97,7 @@ exports.list = function(req, res) {
  */
 exports.wcg1993hymnalByID = function(req, res, next, id) {
 
-  Wcg1993hymnal.findOne({$or: [{page: id}, {id}]}).populate('user', 'displayName').exec(function (err, wcg1993hymnal) {
+  Wcg1993hymnal.findOne({$or: [{page: id}, {id: id}]}).populate('user', 'displayName').exec(function (err, wcg1993hymnal) {
     if (err) {
       return next(err);
     } else if (!wcg1993hymnal) {

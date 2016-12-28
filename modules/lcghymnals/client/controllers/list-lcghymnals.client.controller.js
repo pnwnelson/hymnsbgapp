@@ -14,7 +14,7 @@
 
     vm.search = function() {
 
-      $state.go("lcghymnals.view", {lcghymnalId: vm.searchTerm});
+      $state.go('lcghymnals.view', { lcghymnalId: vm.searchTerm });
     };
   }
 }());

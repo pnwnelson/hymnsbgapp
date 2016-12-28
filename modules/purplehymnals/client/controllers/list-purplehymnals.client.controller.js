@@ -13,8 +13,7 @@
     vm.purplehymnals = PurplehymnalsService.query();
 
     vm.search = function() {
-
-      $state.go("purplehymnals.view", {purplehymnalId: vm.searchTerm});
+      $state.go('purplehymnals.view', { purplehymnalId: vm.searchTerm });
     };
   }
 }());

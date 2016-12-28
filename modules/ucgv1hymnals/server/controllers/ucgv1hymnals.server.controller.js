@@ -97,13 +97,7 @@ exports.list = function(req, res) {
  */
 exports.ucgv1hymnalByID = function(req, res, next, id) {
 
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).send({
-      message: 'Ucgv1hymnal is invalid'
-    });
-  }
-
-  Ucgv1hymnal.findById(id).populate('user', 'displayName').exec(function (err, ucgv1hymnal) {
+  Ucgv1hymnal.findOne({$or: [{page: id}, {id}]}).populate('user', 'displayName').exec(function (err, ucgv1hymnal) {
     if (err) {
       return next(err);
     } else if (!ucgv1hymnal) {

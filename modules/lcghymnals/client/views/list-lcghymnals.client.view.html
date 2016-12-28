@@ -18,8 +18,13 @@
     <hr>
     <div class="row">
       <div class="col-xs-4 text-center">
-        <label class="search-label pull-left">Search Pg #</label>
-        <input class="form-control" ng-model="search.page" type="number" id="page-number" placeholder="Enter pg #"><br>
+      <label class="search-label pull-left">Search Pg #</label>
+        <form class="pull-left input-group" ng-submit="vm.search()">
+            <input class="form-control" ng-model="vm.searchTerm" type="number" id="page-number" placeholder="Pg #">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="submit" value="Go">Go</button>
+            </span>
+        </form>
       </div>
       <div class="col-xs-8 text-center">
         <label class="search-label pull-left">Search Title</label>
@@ -32,7 +37,7 @@
   <div class="list-group">
     
     <a ng-repeat="lcghymnal in vm.lcghymnals | filter:search"
-       ui-sref="lcghymnals.view({ lcghymnalId: lcghymnal._id })"
+       ui-sref="lcghymnals.view({ lcghymnalId: lcghymnal.page })"
        class="list-group-item">
       <div class="list-group-item-heading list-page-label">
       Page: <span class="list-page-number" ng-bind="lcghymnal.page"></span> - 

@@ -1,0 +1,34 @@
+<section>
+  <div class="page-header">
+    <h1>Hymnals</h1>
+  </div>
+  <!-- <div class="list-group">
+    <a ng-repeat="hymnal in vm.hymnals"
+       ui-sref="hymnals.view({ hymnalId: hymnal._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="hymnal.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="hymnal.user" ng-bind="hymnal.user.displayName"></span>
+        <span ng-if="!hymnal.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="hymnal.name"></h4>
+    </a>
+  </div> -->
+
+    <div class="list-group">
+    
+    <a ng-repeat="hymnal in vm.hymnals | orderBy:'page.lcg'"
+       ui-sref="hymnals.view({ hymnalId: hymnal._id })"
+       class="list-group-item">
+      <div class="list-group-item-heading list-page-label">
+      Page: <span class="list-page-number" ng-bind="hymnal.page.lcg"></span> - 
+      <span class="list-page-number" ng-bind="hymnal.title"></span>
+      </div>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.hymnals.$resolved && !vm.hymnals.length">
+    No Hymns yet, why don't you <a ui-sref="hymnals.create">create one</a>?
+  </div>
+</section>

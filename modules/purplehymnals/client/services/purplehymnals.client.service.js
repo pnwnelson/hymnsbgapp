@@ -19,23 +19,4 @@
   }
 }());
 
-/*
-  PurplehymnalsService.$inject = ['$http'];
-
-  function PurplehymnalsService($http) {
-
-    function query(purplehymnalId) {
-      return $http({
-        method: 'GET',
-        url: '/api/purplehymnals/' + purplehymnalId
-      }).then(function(response) {
-        console.log(response, 'success');
-      }, function(err) {
-        console.log(err, 'error');
-      });
-    }
-
-    return { query: query };
-  }
-}()); */
 

@@ -97,13 +97,7 @@ exports.list = function(req, res) {
  */
 exports.lcghymnalByID = function(req, res, next, id) {
 
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).send({
-      message: 'Lcghymnal is invalid'
-    });
-  }
-
-  Lcghymnal.findById(id).populate('user', 'displayName').exec(function (err, lcghymnal) {
+  Lcghymnal.findOne({$or: [{page: id}, {id}]}).populate('user', 'displayName').exec(function (err, lcghymnal) {
     if (err) {
       return next(err);
     } else if (!lcghymnal) {

@@ -12,12 +12,9 @@ module.exports = function(app) {
     .get(purplehymnals.list)
     .post(purplehymnals.create);
 
-  //ADDED BY ME
-  app.route('/api/purplehymnals/search').all(purplehymnalsPolicy.isAllowed)
-    .get(purplehymnals.search);
-
   app.route('/api/purplehymnals/:purplehymnalId').all(purplehymnalsPolicy.isAllowed)
     .get(purplehymnals.read)
+    //.get(purplehymnals.search) //added by me
     .put(purplehymnals.update)
     .delete(purplehymnals.delete);
 

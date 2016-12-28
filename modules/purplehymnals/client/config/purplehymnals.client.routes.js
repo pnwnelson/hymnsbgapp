@@ -23,15 +23,6 @@
           pageTitle: 'Purplehymnals List'
         }
       })
-      .state('purplehymnals.search', {
-        url:'/search',
-        templateUrl: 'modules/purplehymnals/client/views/search-purplehymnals.client.view.html',
-        controller: 'PurplehymnalsSearchController',
-        controllerAs:'vm',
-        data: {
-          pageTitle: 'Purplehymnals Search'
-        }
-      })
       .state('purplehymnals.create', {
         url: '/create',
         templateUrl: 'modules/purplehymnals/client/views/form-purplehymnal.client.view.html',

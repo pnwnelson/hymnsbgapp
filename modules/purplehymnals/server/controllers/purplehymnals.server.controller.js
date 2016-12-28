@@ -92,34 +92,13 @@ exports.list = function(req, res) {
   });
 };
 
-/**
-* Search of Purplehymnals
-*/
-
-exports.search = function(req, res) {
-  Purplehymnal.find(req.query).populate('user').exec(function(err, purplehymnal) {
-    if (err) {
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      res.jsonp(purplehymnal);
-    }
-  });
-};
 
 /**
  * Purplehymnal middleware
  */
 exports.purplehymnalByID = function(req, res, next, id) {
 
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).send({
-      message: 'Purplehymnal is invalid'
-    });
-  }
-
-  Purplehymnal.findById(id).populate('user', 'displayName').exec(function (err, purplehymnal) {
+  Purplehymnal.findOne({$or: [{page: id}, {id}]}).populate('user', 'displayName').exec(function (err, purplehymnal) {
     if (err) {
       return next(err);
     } else if (!purplehymnal) {
@@ -132,31 +111,3 @@ exports.purplehymnalByID = function(req, res, next, id) {
   });
 };
 
-/**
-* possible code below
-*/
-/**
-* Search of Purplehymnals - ADDED BY ME
-*/
-/*
-exports.search = function(req, res) {
-  Purplehymnal.find(req.query).populate('user').exec(function(err, purplehymnal) {
-    if (err) {
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      res.jsonp(purplehymnal);
-    }
-  });
-};
-
-exports.findByPageNumber = function(req, res) {
-  Purplehymnal.findById(id).exec(function(err, purplehymnal) {
-    if (err) {
-      return res.status(400).send(err);
-    } else {
-      return res.status(200).jsonp(purplehymnal);
-    }
-  });
-}; */

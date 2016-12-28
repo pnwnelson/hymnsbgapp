@@ -97,13 +97,7 @@ exports.list = function(req, res) {
  */
 exports.cogwahymnalByID = function(req, res, next, id) {
 
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).send({
-      message: 'Cogwahymnal is invalid'
-    });
-  }
-
-  Cogwahymnal.findById(id).populate('user', 'displayName').exec(function (err, cogwahymnal) {
+  Cogwahymnal.findOne({$or: [{page: id}, {id}]}).populate('user', 'displayName').exec(function (err, cogwahymnal) {
     if (err) {
       return next(err);
     } else if (!cogwahymnal) {

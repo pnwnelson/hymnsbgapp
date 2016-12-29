@@ -14,7 +14,6 @@ module.exports = function(app) {
 
   app.route('/api/purplehymnals/:purplehymnalId').all(purplehymnalsPolicy.isAllowed)
     .get(purplehymnals.read)
-    //.get(purplehymnals.search) //added by me
     .put(purplehymnals.update)
     .delete(purplehymnals.delete);
 

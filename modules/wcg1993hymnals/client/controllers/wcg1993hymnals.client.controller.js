@@ -33,7 +33,7 @@
       }
 
       // TODO: move create/update logic to service
-      if (vm.wcg1993hymnal._id) {
+      if (vm.wcg1993hymnal.page) {
         vm.wcg1993hymnal.$update(successCallback, errorCallback);
       } else {
         vm.wcg1993hymnal.$save(successCallback, errorCallback);
@@ -41,7 +41,7 @@
 
       function successCallback(res) {
         $state.go('wcg1993hymnals.view', {
-          wcg1993hymnalId: res._id
+          wcg1993hymnalId: res.page
         });
       }
 

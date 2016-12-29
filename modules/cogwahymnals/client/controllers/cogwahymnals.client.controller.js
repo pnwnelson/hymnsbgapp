@@ -33,7 +33,7 @@
       }
 
       // TODO: move create/update logic to service
-      if (vm.cogwahymnal._id) {
+      if (vm.cogwahymnal.page) {
         vm.cogwahymnal.$update(successCallback, errorCallback);
       } else {
         vm.cogwahymnal.$save(successCallback, errorCallback);
@@ -41,7 +41,7 @@
 
       function successCallback(res) {
         $state.go('cogwahymnals.view', {
-          cogwahymnalId: res._id
+          cogwahymnalId: res.page
         });
       }
 

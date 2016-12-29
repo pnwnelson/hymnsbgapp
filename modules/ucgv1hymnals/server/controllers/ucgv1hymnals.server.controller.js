@@ -81,7 +81,7 @@ exports.delete = function(req, res) {
  * List of Ucgv1hymnals
  */
 exports.list = function(req, res) {
-  Ucgv1hymnal.find().sort('-created').populate('user', 'displayName').exec(function(err, ucgv1hymnals) {
+  Ucgv1hymnal.find().sort('+page').populate('user', 'displayName').exec(function(err, ucgv1hymnals) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -109,3 +109,5 @@ exports.ucgv1hymnalByID = function(req, res, next, id) {
     next();
   });
 };
+
+

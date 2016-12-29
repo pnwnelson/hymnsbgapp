@@ -20,7 +20,6 @@ var PurplehymnalSchema = new Schema({
   },
   title: {
     type: String,
-    // default: '',
     required: 'Please enter hymn title',
     trim: true
   },

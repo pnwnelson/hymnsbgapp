@@ -33,7 +33,7 @@
       }
 
       // TODO: move create/update logic to service
-      if (vm.ucgv2hymnal._id) {
+      if (vm.ucgv2hymnal.page) {
         vm.ucgv2hymnal.$update(successCallback, errorCallback);
       } else {
         vm.ucgv2hymnal.$save(successCallback, errorCallback);
@@ -41,7 +41,7 @@
 
       function successCallback(res) {
         $state.go('ucgv2hymnals.view', {
-          ucgv2hymnalId: res._id
+          ucgv2hymnalId: res.page
         });
       }
 

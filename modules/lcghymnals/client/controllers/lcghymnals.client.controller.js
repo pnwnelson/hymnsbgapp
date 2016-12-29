@@ -33,7 +33,7 @@
       }
 
       // TODO: move create/update logic to service
-      if (vm.lcghymnal._id) {
+      if (vm.lcghymnal.page) {
         vm.lcghymnal.$update(successCallback, errorCallback);
       } else {
         vm.lcghymnal.$save(successCallback, errorCallback);
@@ -41,7 +41,7 @@
 
       function successCallback(res) {
         $state.go('lcghymnals.view', {
-          lcghymnalId: res._id
+          lcghymnalId: res.page
         });
       }
 

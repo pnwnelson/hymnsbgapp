@@ -10,7 +10,7 @@
 
   function Wcg1993hymnalsService($resource) {
     return $resource('api/wcg1993hymnals/:wcg1993hymnalId', {
-      wcg1993hymnalId: '@_id'
+      wcg1993hymnalId: '@page'
     }, {
       update: {
         method: 'PUT'

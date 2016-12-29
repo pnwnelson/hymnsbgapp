@@ -10,7 +10,7 @@
 
   function CogwahymnalsService($resource) {
     return $resource('api/cogwahymnals/:cogwahymnalId', {
-      cogwahymnalId: '@_id'
+      cogwahymnalId: '@page'
     }, {
       update: {
         method: 'PUT'

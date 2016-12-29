@@ -33,9 +33,9 @@
       }
 
       // TODO: move create/update logic to service
-      if (vm.hymnal._id) {
+      if (vm.hymnal.page) {
         vm.hymnal.$update(successCallback, errorCallback);
-      } else {
+      } else if (vm.hymnal._id) {
         vm.hymnal.$save(successCallback, errorCallback);
       }
 

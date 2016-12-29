@@ -10,7 +10,7 @@
 
   function Ucgv2hymnalsService($resource) {
     return $resource('api/ucgv2hymnals/:ucgv2hymnalId', {
-      ucgv2hymnalId: '@_id'
+      ucgv2hymnalId: '@page'
     }, {
       update: {
         method: 'PUT'

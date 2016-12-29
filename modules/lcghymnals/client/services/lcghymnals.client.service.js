@@ -10,7 +10,7 @@
 
   function LcghymnalsService($resource) {
     return $resource('api/lcghymnals/:lcghymnalId', {
-      lcghymnalId: '@_id'
+      lcghymnalId: '@page'
     }, {
       update: {
         method: 'PUT'

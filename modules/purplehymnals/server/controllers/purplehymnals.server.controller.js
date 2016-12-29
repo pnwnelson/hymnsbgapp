@@ -92,9 +92,8 @@ exports.list = function(req, res) {
   });
 };
 
-
 /**
- * Purplehymnal middleware
+ * Purplehymnal middleware  
  */
 exports.purplehymnalByID = function(req, res, next, id) {
 

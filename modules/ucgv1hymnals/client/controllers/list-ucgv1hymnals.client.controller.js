@@ -13,7 +13,7 @@
     vm.ucgv1hymnals = Ucgv1hymnalsService.query();
 
     vm.search = function() {
-      $state.go('purplehymnals.view', { purplehymnalId: vm.searchTerm });
+      $state.go('ucgv1hymnals.view', { ucgv1hymnalId: vm.searchTerm });
     };
   }
 }());

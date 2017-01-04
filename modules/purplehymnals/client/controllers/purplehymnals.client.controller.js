@@ -33,7 +33,7 @@
       }
 
       // TODO: move create/update logic to service
-      if (vm.purplehymnal._id) {
+      if (vm.purplehymnal.page) {
         vm.purplehymnal.$update(successCallback, errorCallback);
       } else {
         vm.purplehymnal.$save(successCallback, errorCallback);
@@ -42,7 +42,7 @@
       // this function will return the page to the hymn view after hitting Update button
       function successCallback(res) {
         $state.go('purplehymnals.view', {
-          purplehymnalId: res._id // this used to say res._id
+          purplehymnalId: res.page // this used to say res._id
         });
       }
 

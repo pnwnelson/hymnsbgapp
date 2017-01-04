@@ -10,7 +10,7 @@
 
   function PurplehymnalsService($resource) {
     return $resource('api/purplehymnals/:purplehymnalId', {
-      purplehymnalId: '@_id'
+      purplehymnalId: '@page'
     }, {
       update: {
         method: 'PUT' // the PUT method is for existing documents? Whereas POST is for new documents?

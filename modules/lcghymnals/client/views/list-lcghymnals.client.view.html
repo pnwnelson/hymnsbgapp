@@ -16,9 +16,10 @@
       </div>
     </div>
     <hr>
-    <div class="row">
+    <!-- Start Large Screen Page Search Option -->
+    <div class="larger-screen-options row">
       <div class="col-xs-4 text-center">
-      <label class="search-label pull-left">Search Pg #</label>
+        <label class="search-label pull-left">Search Pg #</label>
         <form class="pull-left input-group" ng-submit="vm.search()">
             <input class="form-control" ng-model="vm.searchTerm" type="number" id="page-number" placeholder="Pg #">
             <span class="input-group-btn">
@@ -32,30 +33,58 @@
       </div>
     </div>
 
-    <hr>
-
-  <div class="list-group">
-    
-    <a ng-repeat="lcghymnal in vm.lcghymnals | filter:search"
-       ui-sref="lcghymnals.view({ lcghymnalId: lcghymnal.page })"
-       class="list-group-item">
-      <div class="list-group-item-heading list-page-label">
-      Page: <span class="list-page-number" ng-bind="lcghymnal.page"></span> - 
-      <span class="list-page-number" ng-bind="lcghymnal.title"></span>
+    <!-- Start Small Screen Simple Page Search Option -->
+    <div class="small-screen-options row">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6 text-center">
+        <label class="search-label">Enter Page</label>
+        <form class="text-center" ng-submit="vm.search()">
+            <input class="form-control" ng-model="vm.searchTerm" type="number" id="page-number" placeholder="Pg #">
+            <button class="btn btn-secondary" type="submit" value="Go">Go</button>
+        </form>
       </div>
-    </a>
-  </div>
-    <div class="row">
-    <div class="col-xs-12 update-hymn">
-      <a ui-sref="lcghymnals.create({ lcghymnalId: vm.lcghymnal.page })">
-        <i class="glyphicon glyphicon-edit"></i> Add a missing hymn
-      </a>
+      <div class="col-xs-3"></div>
     </div>
+
+    <!-- Listing the hymns in large screen (hidden by default on mobile) -->
+    <hr class="larger-screen-options">
+    <div id="large-screen-list" class="larger-screen-options" ng-class="{'show-hymn-list': showHymnList}">
+      <div class="list-group">
+        <a ng-repeat="lcghymnal in vm.lcghymnals | filter:search"
+           ui-sref="lcghymnals.view({ lcghymnalId: lcghymnal.page })"
+           class="list-group-item">
+          <div class="list-group-item-heading list-page-label">
+            Page: <span class="list-page-number" ng-bind="lcghymnal.page"></span> - 
+            <span class="list-page-number" ng-bind="lcghymnal.title"></span>
+          </div>
+        </a>
+        <div class="row">
+          <div class="col-xs-12 update-hymn">
+            <a ui-sref="lcghymnals.create({ lcghymnalId: vm.lcghymnal._id })">
+              <i class="glyphicon glyphicon-edit"></i> Add a missing hymn
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  <div class="alert alert-warning text-center" ng-if="vm.lcghymnals.$resolved && !vm.lcghymnals.length">
-    No LCG hymns yet, why don't you <a ui-sref="lcghymnals.create">create one</a>?
-  </div>
+
+    <div class="alert alert-warning text-center" ng-if="vm.lcghymnals.$resolved && !vm.lcghymnals.length">
+      No LCG hymnals yet, why don't you <a ui-sref="lcghymnals.create">create one</a>?
+    </div>
+
   </div>
   <div class="col-sm-2 col-md-3 col-lg-3"></div>
 </div>
+  <div class="footer navbar-fixed-bottom">
+    <!-- option to show hymn list on mobile -->
+    <div class="col-xs-12 text-center show-list">
+      <div class="checkbox">
+        <input type="checkbox" value="1" id="checkboxInput" ng-model="showHymnList" name="" />
+        <label for="checkboxInput"></label>
+      </div>
+      <div class="checkbox-list-hymns">
+        <span>List Hymns</span>
+      </div>
+    </div>
+  </div>
 </section>

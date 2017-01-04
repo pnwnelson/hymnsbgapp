@@ -13,8 +13,6 @@
     
 
     vm.ucgv2hymnals = Ucgv2hymnalsService.query();
-  
-  }
 
   // function search(Ucgv2hymnalsService, req, res, next) {
   //   var searchTerm = {};
@@ -26,10 +24,8 @@
   //     req.jsonp(ucgv2hymnals);
   //   });
 
-  }
-
     vm.search = function() {
       $state.go('ucgv2hymnals.view', { ucgv2hymnalId: vm.searchTerm });
     };
-  
+  }
 }());

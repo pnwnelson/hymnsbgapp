@@ -16,9 +16,11 @@
       </div>
     </div>
     <hr>
-    <div class="row">
+
+    <!-- Start Large Screen Page Search Option -->
+    <div class="larger-screen-options row">
       <div class="col-xs-4 text-center">
-      <label class="search-label pull-left">Search Pg #</label>
+        <label class="search-label pull-left">Search Pg #</label>
         <form class="pull-left input-group" ng-submit="vm.search()">
             <input class="form-control" ng-model="vm.searchTerm" type="number" id="page-number" placeholder="Pg #">
             <span class="input-group-btn">
@@ -32,35 +34,70 @@
       </div>
     </div>
 
-    <hr>
-
-  <div class="list-group">
-    
-    <a ng-repeat="purplehymnal in vm.purplehymnals | filter:search"
-       ui-sref="purplehymnals.view({ purplehymnalId: purplehymnal.page })"
-       class="list-group-item">
-      <!-- <small class="list-group-item-text">
-        Posted on
-        <span ng-bind="purplehymnal.created | date:'mediumDate'"></span>
-        by
-        <span ng-if="purplehymnal.user" ng-bind="purplehymnal.user.displayName"></span>
-        <span ng-if="!purplehymnal.user">Deleted User</span>
-      </small> -->
-      <div class="list-group-item-heading list-page-label">
-      Page: <span class="list-page-number" ng-bind="purplehymnal.page"></span> - 
-      <span class="list-page-number" ng-bind="purplehymnal.title"></span></div>
-    </a>
-    <div class="row">
-    <div class="col-xs-12 update-hymn">
-      <a ui-sref="purplehymnals.create({ purplehymnalId: vm.purplehymnal.page })">
-        <i class="glyphicon glyphicon-edit"></i> Add a missing hymn
-      </a>
+    <!-- Start Small Screen Simple Page Search Option -->
+    <div class="small-screen-options row">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6 text-center">
+        <label class="search-label">Enter Page</label>
+        <form class="text-center" ng-submit="vm.search()">
+            <input class="form-control" ng-model="vm.searchTerm" type="number" id="page-number" placeholder="Pg #">
+            <button class="btn btn-secondary" type="submit" value="Go">Go</button>
+        </form>
+      </div>
+      <div class="col-xs-3"></div>
     </div>
-  </div>
-  <div class="alert alert-warning text-center" ng-if="vm.purplehymnals.$resolved && !vm.purplehymnals.length">
-    No Purplehymnals yet, why don't you <a ui-sref="purplehymnals.create">create one</a>?
-  </div>
+
+    <!-- Listing the hymns in large screen (hidden by default on mobile) -->
+    <hr class="larger-screen-options">
+    <div id="large-screen-list" class="larger-screen-options" ng-class="{'show-hymn-list': showHymnList}">
+      <div class="list-group">
+        <a ng-repeat="purplehymnal in vm.purplehymnals | filter:search"
+           ui-sref="purplehymnals.view({ purplehymnalId: purplehymnal.page })"
+           class="list-group-item">
+          <div class="list-group-item-heading list-page-label">
+            Page: <span class="list-page-number" ng-bind="purplehymnal.page"></span> - 
+            <span class="list-page-number" ng-bind="purplehymnal.title"></span>
+          </div>
+        </a>
+        <div class="row">
+          <div class="col-xs-12 update-hymn">
+            <a ui-sref="purplehymnals.create({ purplehymnalId: vm.purplehymnal._id })">
+              <i class="glyphicon glyphicon-edit"></i> Add a missing hymn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-warning text-center" ng-if="vm.purplehymnals.$resolved && !vm.purplehymnals.length">
+      No Purplehymnals yet, why don't you <a ui-sref="purplehymnals.create">create one</a>?
+    </div>
+
   </div>
   <div class="col-sm-2 col-md-3 col-lg-3"></div>
 </div>
+
+  <div class="footer navbar-fixed-bottom">
+<!--     <div class="col-xs-6 update-hymn">
+      <a ui-sref="purplehymnals.create({ purplehymnalId: vm.purplehymnal._id })">
+        <i class="glyphicon glyphicon-edit"></i> Add a missing hymn
+      </a>
+    </div> -->
+
+    <!-- option to show hymn list on mobile -->
+  <div class="col-xs-12 text-center show-list">
+    <div class="checkbox">
+      <input type="checkbox" value="1" id="checkboxInput" ng-model="showHymnList" name="" />
+      <label for="checkboxInput"></label>
+    </div>
+    <div class="checkbox-list-hymns">
+      <span>List Hymns</span>
+    </div>
+  </div>
+<!--</div>
+      <span class="pull-right"><input type="checkbox" ng-model="showHymnList"> List Hymns</span>
+    </div> -->
+
+
 </section>
+

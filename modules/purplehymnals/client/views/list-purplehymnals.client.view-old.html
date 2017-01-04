@@ -8,19 +8,19 @@
           <a href="/" class="btn btn-secondary btn-sm" role="button">
             <i class="glyphicon glyphicon-backward"></i><span> Choose hymnal</span>
           </a>
-          <h4>UCG (2nd Ed.) Hymnal</h4>
+          <h4>Purple Hymnal</h4>
         </div>
       </div>
       <div class="col-xs-4 push-right">
-        <img class="hymnal-cover" src="./modules/core/client/img/ucgv2hymnalcover.png">
+        <img class="hymnal-cover" src="./modules/core/client/img/purplehymnalcover.jpg">
       </div>
     </div>
     <hr>
     <div class="row">
-     <div class="col-xs-4 text-center">
+      <div class="col-xs-4 text-center">
       <label class="search-label pull-left">Search Pg #</label>
-        <form class="pull-left input-group" ng-submit="search()">
-            <input class="form-control" ng-model="searchTerm" type="number" id="page-number" placeholder="Pg #">
+        <form class="pull-left input-group" ng-submit="vm.search()">
+            <input class="form-control" ng-model="vm.searchTerm" type="number" id="page-number" placeholder="Pg #">
             <span class="input-group-btn">
               <button class="btn btn-secondary" type="submit" value="Go">Go</button>
             </span>
@@ -31,12 +31,13 @@
         <input class="form-control" ng-model="search.title" type="string" id="title" placeholder="Enter title keyword"><br>
       </div>
     </div>
-  <hr>
+
+    <hr>
 
   <div class="list-group">
     
-    <a ng-repeat="ucgv2hymnal in vm.ucgv2hymnals | filter:search"
-       ui-sref="ucgv2hymnals.view({ ucgv2hymnalId: ucgv2hymnal.page })"
+    <a ng-repeat="purplehymnal in vm.purplehymnals | filter:search"
+       ui-sref="purplehymnals.view({ purplehymnalId: purplehymnal.page })"
        class="list-group-item">
       <!-- <small class="list-group-item-text">
         Posted on
@@ -46,18 +47,18 @@
         <span ng-if="!purplehymnal.user">Deleted User</span>
       </small> -->
       <div class="list-group-item-heading list-page-label">
-      Page: <span class="list-page-number" ng-bind="ucgv2hymnal.page"></span> - 
-      <span class="list-page-number" ng-bind="ucgv2hymnal.title"></div>
+      Page: <span class="list-page-number" ng-bind="purplehymnal.page"></span> - 
+      <span class="list-page-number" ng-bind="purplehymnal.title"></span></div>
     </a>
     <div class="row">
     <div class="col-xs-12 update-hymn">
-      <a ui-sref="ucgv2hymnals.create({ ucgv2hymnalId: vm.ucgv2hymnal.page })">
+      <a ui-sref="purplehymnals.create({ purplehymnalId: vm.purplehymnal._id })">
         <i class="glyphicon glyphicon-edit"></i> Add a missing hymn
       </a>
     </div>
   </div>
-  <div class="alert alert-warning text-center" ng-if="vm.ucgv2hymnals.$resolved && !vm.ucgv2hymnals.length">
-    No UCG (2nd Ed.) hymns yet, why don't you <a ui-sref="ucgv2hymnals.create">create one</a>?
+  <div class="alert alert-warning text-center" ng-if="vm.purplehymnals.$resolved && !vm.purplehymnals.length">
+    No Purplehymnals yet, why don't you <a ui-sref="purplehymnals.create">create one</a>?
   </div>
   </div>
   <div class="col-sm-2 col-md-3 col-lg-3"></div>

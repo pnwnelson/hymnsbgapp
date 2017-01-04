@@ -211,6 +211,7 @@ a:hover .header-profile-image {
 }
 
 .update-hymn {
+  bottom: 0px;
   padding: 15px;
 }
 
@@ -218,6 +219,13 @@ a:hover .header-profile-image {
   color: lightgray;
 }
 
+/*.show-list {
+  position: fixed;
+  bottom: 10px;
+  right: 2px;
+  padding: 15px;
+}
+*/
 .hymnAuthorName {
   font-size: 12px;
 }
@@ -296,7 +304,16 @@ h3 {
   margin-top: 30px;
 }
 
+.small-screen-options {
+  display: none;
+}
+
+.footer {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
+
   h4 {
     font-size: 30px;
   }
@@ -314,6 +331,107 @@ h3 {
   .list-page-header {
     text-align: left;
   }
+}
+
+@media only screen and (max-width: 468px) {
+  .larger-screen-options {
+    display: none;
+  }
+
+  .show-hymn-list {
+    display: inline-block;
+    padding-top: 10px;
+  }
+
+  .small-screen-options {
+    display: block;
+    font-size: 14px;
+  }
+
+  .small-screen-options input {
+    height: 75px;
+    width: 100px;
+    font-size: 36px;
+    margin: auto;
+  }
+
+  .small-screen-options button {
+    height: 75px;
+    width: 100px;
+    margin: 15px;
+    font-size: 36px;
+  }
+
+  .footer {
+    display: inline-block;
+    background: white;
+    position: fixed;
+    height: 40px;
+    font-size: 12px;
+    border-top: 1px solid lightgray;
+    width: 100%;
+  }
+
+  .show-list {
+
+    color: lightgray;
+  }
+
+  .update-hymn {
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  .footer input[type=checkbox] {
+    visibility: hidden;
+  }
+
+.checkbox {
+  width: 20px;
+  position: absolute;
+  display: inline-block;
+  left: 5px;
+}
+
+.checkbox label {
+  cursor: pointer;
+  position: absolute;
+  float: left;
+  width: 20px;
+  height: 20px;
+  top: 0;
+    left: 0;
+  background: #eee;
+  border:1px solid #ddd;
+}
+
+.checkbox label:after {
+  opacity: 0.1;
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background: transparent;
+  top: 6px;
+  left: 7px;
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+
+  transform: rotate(-45deg);
+}
+
+.checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+.checkbox-list-hymns {
+  position: absolute;
+  left: 35px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
 }
 
 

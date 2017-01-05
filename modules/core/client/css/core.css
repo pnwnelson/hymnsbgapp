@@ -139,6 +139,15 @@ a:hover .header-profile-image {
   padding: 9px;
 }
 
+.dot-clean {
+  background: rgba(8,130,8,.50);
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
 .page-block-unclean {
   background: rgba(200,28,28,0.50);
   width: 70px;
@@ -147,12 +156,30 @@ a:hover .header-profile-image {
   padding: 9px;
 }
 
+.dot-unclean {
+  background: rgba(200,28,28,0.50);
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
 .page-block-null {
-  background: lightgray;
+  background: rgba(255,153,0,0.25);
   width: 70px;
   height: 60px;
   border-radius: 3px;
   padding: 9px;
+}
+
+.dot-null {
+  background: rgba(255,153,0,0.25);
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  margin-top: 5px;
+  margin-right: 5px;
 }
 
 .page {

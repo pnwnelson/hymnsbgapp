@@ -54,6 +54,9 @@
            ui-sref="wcg1993hymnals.view({ wcg1993hymnalId: wcg1993hymnal.page })"
            class="list-group-item">
           <div class="list-group-item-heading list-page-label">
+            <div class="dot-clean pull-left" ng-show="wcg1993hymnal.approved == 'true'"></div>
+            <div class="dot-unclean pull-left" ng-show="wcg1993hymnal.approved == 'false'"></div>
+            <div class="dot-null pull-left" ng-show="wcg1993hymnal.approved == 'null'"></div>
             Page: <span class="list-page-number" ng-bind="wcg1993hymnal.page"></span> - 
             <span class="list-page-number" ng-bind="wcg1993hymnal.title"></span>
           </div>

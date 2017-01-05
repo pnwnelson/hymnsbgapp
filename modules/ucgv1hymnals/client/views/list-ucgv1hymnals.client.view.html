@@ -54,6 +54,9 @@
            ui-sref="ucgv1hymnals.view({ ucgv1hymnalId: ucgv1hymnal.page })"
            class="list-group-item">
           <div class="list-group-item-heading list-page-label">
+            <div class="dot-clean pull-left" ng-show="ucgv1hymnal.approved == 'true'"></div>
+            <div class="dot-unclean pull-left" ng-show="ucgv1hymnal.approved == 'false'"></div>
+            <div class="dot-null pull-left" ng-show="ucgv1hymnal.approved == 'null'"></div>
             Page: <span class="list-page-number" ng-bind="ucgv1hymnal.page"></span> - 
             <span class="list-page-number" ng-bind="ucgv1hymnal.title"></span>
           </div>

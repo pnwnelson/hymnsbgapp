@@ -55,6 +55,9 @@
            ui-sref="purplehymnals.view({ purplehymnalId: purplehymnal.page })"
            class="list-group-item">
           <div class="list-group-item-heading list-page-label">
+            <div class="dot-clean pull-left" ng-show="purplehymnal.approved == 'true'"></div>
+            <div class="dot-unclean pull-left" ng-show="purplehymnal.approved == 'false'"></div>
+            <div class="dot-null pull-left" ng-show="purplehymnal.approved == 'null'"></div>
             Page: <span class="list-page-number" ng-bind="purplehymnal.page"></span> - 
             <span class="list-page-number" ng-bind="purplehymnal.title"></span>
           </div>

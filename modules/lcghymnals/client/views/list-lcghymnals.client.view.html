@@ -54,6 +54,9 @@
            ui-sref="lcghymnals.view({ lcghymnalId: lcghymnal.page })"
            class="list-group-item">
           <div class="list-group-item-heading list-page-label">
+            <div class="dot-clean pull-left" ng-show="lcghymnal.approved == 'true'"></div>
+            <div class="dot-unclean pull-left" ng-show="lcghymnal.approved == 'false'"></div>
+            <div class="dot-null pull-left" ng-show="lcghymnal.approved == 'null'"></div>
             Page: <span class="list-page-number" ng-bind="lcghymnal.page"></span> - 
             <span class="list-page-number" ng-bind="lcghymnal.title"></span>
           </div>

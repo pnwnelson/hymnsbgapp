@@ -55,6 +55,9 @@
            ui-sref="cogwahymnals.view({ cogwahymnalId: cogwahymnal.page })"
            class="list-group-item">
           <div class="list-group-item-heading list-page-label">
+            <div class="dot-clean pull-left" ng-show="cogwahymnal.approved == 'true'"></div>
+            <div class="dot-unclean pull-left" ng-show="cogwahymnal.approved == 'false'"></div>
+            <div class="dot-null pull-left" ng-show="cogwahymnal.approved == 'null'"></div>
             Page: <span class="list-page-number" ng-bind="cogwahymnal.page"></span> - 
             <span class="list-page-number" ng-bind="cogwahymnal.title"></span>
           </div>

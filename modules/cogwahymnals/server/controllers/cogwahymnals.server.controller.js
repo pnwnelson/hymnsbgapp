@@ -96,8 +96,7 @@ exports.list = function(req, res) {
  * Cogwahymnal middleware
  */
 exports.cogwahymnalByID = function(req, res, next, id) {
-
-  Cogwahymnal.findOne({$or: [{page: id}, {id}]}).populate('user', 'displayName').exec(function (err, cogwahymnal) {
+  Cogwahymnal.findOne({$or: [{page: id},{id}]}).populate('user', 'displayName').exec(function (err, cogwahymnal) {
     if (err) {
       return next(err);
     } else if (!cogwahymnal) {

@@ -277,7 +277,17 @@ a:hover .header-profile-image {
   color: rgba(67,152,152,0.75);
   background: none;
   text-shadow: none;
+}
 
+.btn-paper {
+  width: 175px;
+  margin: 10px;
+  font-weight: 300;
+  font-size: 18px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: white;
+  background: #FFC797;
 }
 
 .btn-secondary {

@@ -2,12 +2,15 @@
 <div class="row">
     <div class="col-xs-12 mainButtons">   
         <h5>Which hymnal are you using?</h5>
-        <a href="/purplehymnals" class="btn btn-primary" role="button">Purple Hymnal</a><br>
+        <a href="/purplehymnals" class="btn btn-primary" role="button">Purple</a><br>
         <a href="/wcg1993hymnals" class="btn btn-primary" role="button">WCG (1993)</a><br>
         <a href="/ucgv1hymnals" class="btn btn-primary" role="button">UCG (1st Ed.)</a><br>
-        <a href="/ucgv2hymnals" class="btn btn-primary" role="button">UCG (2nd Ed.)</a><br>
+        <a href="/ucgv2hymnals" class="btn btn-primary" role="button">UCG (2007)</a><br>
         <a href="/lcghymnals" class="btn btn-primary" role="button">LCG</a><br>
-        <a href="/cogwahymnals" class="btn btn-primary" role="button">COGWA</a><br>
+        <a href="/cogwahymnals" class="btn btn-primary" role="button">COGWA</a>
+        <div ng-show="authentication.user">
+            <a href="/scripture-support" class="btn btn-paper" role="button">Scriptural Support</a>
+        </div>
     </div>
   </div>
 </section>

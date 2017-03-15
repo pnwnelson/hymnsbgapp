@@ -23,6 +23,6 @@ module.exports = {
     },
     css: 'public/dist/application.min.css',
     js: 'public/dist/application.min.js',
-    json: 'public/dist/manifest.json'
+    json: 'modules/core/client/manifest.json'
   }
 };

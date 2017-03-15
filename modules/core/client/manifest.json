@@ -1,0 +1,48 @@
+{
+  "name": "Hymns Background",
+  "short_name":"Hymns BG",
+  "start_url":"/",
+  "author":"@pnwnelson",
+  "display":"standalone",
+  "orientation": "portrait",
+  "background_color": "#FFC797",
+  "description": "A list of Church of God hymnals showing hymn authors and a little snippet of their background.",
+  "icons": [
+    {
+      "src": "16x16.png",
+      "sizes": "32x32",
+      "type": "modules/core/client/img"
+    },
+    {
+      "src": "24x24.png",
+      "sizes": "24x24",
+      "type": "modules/core/client/img"
+    },
+    {
+      "src": "32x32.png",
+      "sizes": "32x32",
+      "type": "modules/core/client/img"
+    },
+    {
+      "src": "48x48.png",
+      "sizes": "48x48",
+      "type": "modules/core/client/img"
+    },
+    {
+      "src": "64x64.png",
+      "sizes": "64x64",
+      "type": "modules/core/client/img"
+    },
+    {
+      "src": "96x96.png",
+      "sizes": "96x96",
+      "type": "modules/core/client/img"
+    },
+    {
+      "src": "128x128.png",
+      "sizes": "128x128",
+      "type": "modules/core/client/img"
+    }
+  ],
+  "theme_color": "#FFC797",
+}

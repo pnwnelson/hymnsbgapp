@@ -3,7 +3,7 @@
 module.exports = {
   app: {
     title: 'Hymns Background',
-    description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
+    description: 'A list of Church of God hymnals showing hymn authors and a little snippet of their background.',
     keywords: 'mongodb, express, angularjs, node.js, mongoose, passport',
     googleAnalyticsTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'UA-92953857-1'
   },
@@ -29,6 +29,7 @@ module.exports = {
   sessionCollection: 'sessions',
   logo: 'modules/core/client/img/brand/logo.png',
   favicon: 'modules/core/client/img/brand/favicon.ico',
+  manifest: 'modules/core/client/manifest.json',
   uploads: {
     profileUpload: {
       dest: './modules/users/client/img/profile/uploads/', // Profile upload destination path

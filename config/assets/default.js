@@ -37,7 +37,7 @@ module.exports = {
       'modules/*/client/*.js',
       'modules/*/client/**/*.js'
     ],
-    json: ['public/dist/manifest.json'],
+    json: ['modules/core/client/manifest.json'],
     views: ['modules/*/client/views/**/*.html'],
     templates: ['build/templates.js']
   },

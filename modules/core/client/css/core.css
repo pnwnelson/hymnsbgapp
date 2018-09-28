@@ -345,6 +345,11 @@ h3 {
   display: none;
 }
 
+.mobile-search {
+  display: none;
+  padding-bottom: 15px;
+}
+
 .footer {
   display: none;
 }

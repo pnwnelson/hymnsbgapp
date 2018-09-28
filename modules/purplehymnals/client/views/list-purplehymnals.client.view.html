@@ -8,7 +8,7 @@
           <a href="/" class="btn btn-secondary btn-sm" role="button">
             <i class="glyphicon glyphicon-backward"></i><span> Choose hymnal</span>
           </a>
-          <h4>Purple Hymnal</h4>
+          <h4>WCG (1974)</h4>
         </div>
       </div>
       <div class="col-xs-4 push-right">
@@ -50,6 +50,10 @@
     <!-- Listing the hymns in large screen (hidden by default on mobile) -->
     <hr class="larger-screen-options">
     <div id="large-screen-list" class="larger-screen-options" ng-class="{'show-hymn-list': showHymnList}">
+      <!-- Show Title Search box on checkbox input -->
+      <div class="mobile-search">
+        <input class="form-control" ng-model="search.title" type="string" id="title" placeholder="Search By Title Keyword">
+      </div>
       <div class="list-group">
         <a ng-repeat="purplehymnal in vm.purplehymnals | filter:search"
            ui-sref="purplehymnals.view({ purplehymnalId: purplehymnal.page })"
@@ -87,7 +91,7 @@
         <label for="checkboxInput"></label>
       </div>
       <div class="checkbox-list-hymns">
-        <span>List Hymns</span>
+        <span>List Hymns or Search By Title</span>
       </div>
     </div>
   </div>

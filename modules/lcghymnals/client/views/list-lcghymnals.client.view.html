@@ -8,7 +8,7 @@
           <a href="/" class="btn btn-secondary btn-sm" role="button">
             <i class="glyphicon glyphicon-backward"></i><span> Choose hymnal</span>
           </a>
-          <h4>LCG Hymnal</h4>
+          <h4>LCG</h4>
         </div>
       </div>
       <div class="col-xs-4 push-right">
@@ -49,6 +49,10 @@
     <!-- Listing the hymns in large screen (hidden by default on mobile) -->
     <hr class="larger-screen-options">
     <div id="large-screen-list" class="larger-screen-options" ng-class="{'show-hymn-list': showHymnList}">
+      <!-- Show Title Search box on checkbox input -->
+      <div class="mobile-search">
+        <input class="form-control" ng-model="search.title" type="string" id="title" placeholder="Search By Title Keyword">
+      </div>
       <div class="list-group">
         <a ng-repeat="lcghymnal in vm.lcghymnals | filter:search"
            ui-sref="lcghymnals.view({ lcghymnalId: lcghymnal.page })"
@@ -86,7 +90,7 @@
         <label for="checkboxInput"></label>
       </div>
       <div class="checkbox-list-hymns">
-        <span>List Hymns</span>
+        <span>List Hymns or Search By Title</span>
       </div>
     </div>
   </div>

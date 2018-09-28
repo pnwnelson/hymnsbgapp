@@ -375,9 +375,22 @@ h3 {
     display: none;
   }
 
+  .search-by-title {
+    display: none;
+  }
+
   .show-hymn-list {
-    display: inline-block;
+    display: block;
     padding-top: 10px;
+  }
+
+  .show-title-search {
+    display: inline-block;
+  }
+
+  .mobile-search {
+    display: block;
+    padding-bottom: 15px;
   }
 
   .small-screen-options {
